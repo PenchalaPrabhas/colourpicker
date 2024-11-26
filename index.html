@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker with Name</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        background-color: #ff0101;
+        margin-bottom: 10px;
+      }
+
+      input[type="color"] {
+        width: 90px;
+        height: 45px;
+        border: 5px solid black;
+        cursor: pointer;
+        
+      }
+      #display-text{
+        color:red;
+       
+      }
+
+      header {
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        background-color: rgb(76, 223, 140);
+      }
+
+      #color-container {
+        background-color: white;
+        height: 470px;
+        width: 380px;
+        border: 5px solid black;
+        align-items: center;
+        
+      }
+      #main {
+        height: 550px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        margin-top: 10px;
+      }
+      #right-side {
+        background-color: rgb(222, 222, 255);
+        width: 50%;
+        height: 100%;
+      }
+      #left-container {
+        background-color: rgb(137, 137, 176);
+        width: 50%;
+        height: 100%;
+        display: flex; /* Enables flexbox */
+        align-items: center; /* Centers content vertically */
+        justify-content: center; /* Centers content horizontally */
+    }
+    #text-input{
+      width: 99%;
+      height: 25%;
+      
+    }
+    button{
+      height: 50px;
+      width:100px;
+      background: linear-gradient(rgb(0, 187, 255), blue);
+      color: white;
+      
+    }
+    button:hover{
+      background: linear-gradient(rgb(255, 0, 0), blue);
+    }
+    #size{
+      height: 100px;
+      width: 100%;
+      background-color: rgb(139, 172, 226);
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      
+    }
+    #s1{
+      height: 80px;
+      width: 80px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      border: solid 3px black;
+    }
+    #s2{
+      height: 80px;
+      width: 40px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      border: solid 3px black;
+    }
+    #s3{
+      height: 40px;
+      width: 80px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      border: solid 3px black;
+    }
+    #s4{
+      height: 50px;
+      width: 70px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      border: solid 3px black;
+    }
+    #s5{
+      height: 70px;
+      width: 50px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      border: solid 3px black;
+    }
+    #s1:hover{
+      border:solid 3px red ;
+      background-color: pink;
+    }
+    #s2:hover{
+      border:solid 3px red ;
+      background-color: pink;
+    }
+    #s3:hover{
+      border:solid 3px red ;
+      background-color: pink;
+    }
+    #s4:hover{
+      border:solid 3px red ;
+      background-color: pink;
+    }
+    #s5:hover{
+      border:solid 3px red ;
+      background-color: pink;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2 id="header-title">Color Picker Project (Alpha version 1.0)</h2>
+      <div>
+        <h4>Container Color</h4>
+        <input type="color" id="container-color-picker" />
+      </div>
+      <div>
+        <h4>Text Color</h4>
+        <input type="color" id="text-color-picker" />
+      </div>
+      <div>
+        <h4>Border Color</h4>
+        <input type="color" id="border-color-picker" />
+      </div>
+      <button onclick="download()">Download Image</button>
+    </header>
+
+    <div id="main">
+      <div id="left-container">
+        <div id="color-container">
+          <center><h3 id="display-text">enter text there =></h3></center>
+        </div>
+      </div>
+     
+      <div id="right-side">
+        <textarea id="text-input" placeholder="Enter text here"></textarea>
+
+
+        <div id="size">
+          <div id="s1" onclick="ss1()">1:1</div> 
+          <div id="s2" onclick="ss2()">9:16</div> 
+          <div id="s3" onclick="ss3()">16:9</div> 
+  
+          <div id="s5" onclick="ss5()">3:4<br></div> 
+          <div id="s4" onclick="ss4()">4:3</div> 
+          
+        </div>
+
+
+        <center><h1>(font styles will get on Beta version)</h1></center>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
